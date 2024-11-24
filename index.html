@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Phone | Servicio técnico y ventas de accesroios móviles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       /* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f4f8;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #161616;
+    color: white;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    flex: 1;
+    min-width: 200px; /* Tamaño mínimo en pantallas pequeñas */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    flex: 1;
+}
+
+.search-button {
+    border: none;
+   
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ea0029;
+}
+
+/* Carrito */
+.cart {
+    position: relative;
+}
+
+.cart-icon {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #d1eaff;
+}
+
+.flex-servicio {
+    padding: 40px 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-color: #161616;
+    border-style: double;
+}
+
+.parrafo-servicio{
+    max-width: 350px;
+    font-style: italic;
+    
+}
+
+
+button {
+        background-color: #d0a927;
+        color: #fff;
+        border: none;
+        padding: 12px 16px;
+        font-family: Verdana, sans-serif;
+        border-radius: 20px;
+      }
+.Productos-tienda{
+    margin: 40px 30px;
+    margin-top: 30px;
+}
+h1{
+    margin-bottom: 40px;
+}
+
+.productos-descuento{
+    min-width:350px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.productos-descuento > div {
+        border: solid #161616;
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+      }
+.productos-descuento > div > h4{
+    margin-top: 10px;
+}
+.productos-descuento > div >p{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.precio-anterior{
+    text-decoration: line-through;
+}
+.precio-descuento{
+    color: #ea0029;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-container {
+      display: flex; /* Activa Flexbox */
+      
+      justify-content: space-around; /* Espacio igual entre elementos */
+      align-items: center; /* Alineación vertical al centro */
+      height: auto; /* Altura automática */
+      border: 2px solid #000; /* Borde del contenedor */
+      background-color: #161616; /* Fondo del contenedor */
+      padding: 10px;
+      gap: 10px; /* Espacio entre los elementos */
+    }
+
+    .item {
+      
+    }
+
+    .logo{
+        width: 250px;
+    }
+    .medio-pago{
+        margin-top: 10px;  
+    }
+    .medios-pago-text{
+        color: white;
+        margin-bottom: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .footer-section{
+    margin: 10px;
+      flex: 1 1 200px; /* Cada sección ocupa al menos 200px */
+    }
+    .footer-section > h3{
+        color: #f2f4f8;
+        margin-bottom: 5px;
+    }
+    .footer-section > a {
+        color: #f2f4f8;
+        text-decoration: none;
+    }
+
+    .footer-bottom{
+        background-color: #161616;
+        color: #d1eaff;
+        text-align: center;
+    }
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .nav {
+        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+        width: 100%;
+    }
+
+    .nav a {
+        font-size: 14px; /* Tamaño de texto más pequeño en móviles */
+    }
+    .footer-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: stretch; /* Los elementos ocupan todo el ancho */
+      }
+
+      .item {
+        flex: none; /* Cada elemento toma su tamaño natural */
+      }
+
+}
+</style>
+    
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#"><img src="./images/logo.svg" width="180px"/></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="¿Qué estás buscando?" class="search-input">
+            <button class="search-button">🔍</button>
+        </div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="cart">
+            <a href="#" class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="./images/banner1.png" alt="Imagen 1"></div>
+                <div class="slide"><img src="./images/dac0fd5c-9a89-40a4-81e2-b09318e71eb6___77415a150bcfee5d4fe02f0b6f843953.webp" alt="Imagen 2"></div>
+                <div class="slide"><img src="./images/84176728-8bb5-454d-96c4-6ed40386a3d6___599475e6befd196eccbd65dfc07734d2.webp" alt="Imagen 3"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="flex-servicio">
+            <p class="parrafo-servicio">
+                Contamos con los mejores técnicos para dejar tu teléfono como nuevo ¡Trabajamos con repuestos 100% original!
+            </p>
+            <button>
+                Cotizar
+            </button>
+
+        </div>
+
+        <section class="Productos-tienda"> 
+            <h1> Productos con descuento</h1>
+            <div class="productos-descuento">
+                <!--Producto 1-->
+                <div>
+                    <img src="./images/378911-1200-auto.webp" width="326px" height=""/>
+                    <h4>Audífonos bluetooth True Wireless Baseus AirGo AS01</h4>
+                    <p>
+                        <span class="precio-anterior">s/89.90</span>
+                        <span class="precio-descuento">s/79.90</span>
+                    </p>
+                </div>
+
+                <!--Producto 1-->
+
+                <div>
+                    <img src="./images/382515-1200-auto.webp" width="326px" height=""/>
+                    <h4>Audífonos bluetooth True Wireless Baseus AirGo AS01</h4>
+                    <p>
+                        <span class="precio-anterior">s/89.90</span>
+                        <span class="precio-descuento">s/79.90</span>
+                    </p>
+                
+                </div>
+                <!--Producto 2-->
+
+                <div>
+                    <img src="./images/398592-1200-auto.webp" width="326px" height=""/>
+                    <h4>Audífonos bluetooth True Wireless Baseus AirGo AS01</h4>
+                    <p>
+                        <span class="precio-anterior">s/999.90</span>
+                        <span class="precio-descuento">s/899.90</span>
+                    </p>
+                
+                </div>
+
+            </div>
+        </section>
+
+        <section class="Productos-tienda"> 
+            <h1> Te puede gustar</h1>
+            <div class="productos-descuento">
+                <!--Producto 1-->
+                <div>
+                    <img src="./images/284397-1200-auto.webp" width="326px" height=""/>
+                    <h4>Smartwatch Roadtrip Watch S3 Lite 43mm, resistente </br>al agua</h4>
+                    <p>
+                        <span class="precio-anterior">s/199.90</span>
+                        <span class="precio-descuento">s/99.90</span>
+                    </p>
+                </div>
+
+                <!--Producto 1-->
+
+                <div>
+                    <img src="./images/304136-1200-auto.webp" width="326px" height=""/>
+                    <h4>Case para Samsung Galaxy S23 con anillo de soporte</h4>
+                    <p>
+                        <span class="precio-anterior">s/39.90</span>
+                        <span class="precio-descuento">s/19.90</span>
+                    </p>
+                
+                </div>
+                <!--Producto 2-->
+
+                <div>
+                    <img src="./images/358182-1200-auto.webp" width="326px" height=""/>
+                    <h4>Trípode Selfie stick con control bluetooth de 68 cm</h4>
+                    <p>
+                        <span class="precio-anterior">s/59.90</span>
+                        <span class="precio-descuento">s/49.90</span>
+                    </p>
+                
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+          <!-- Sección 1: Descripción -->
+          <div class="footer-section">
+            <div class="logo">
+                <img src="./images/logo.svg"/>
+            </div>
+        </br>
+        <span class="medios-pago-text">Medios de pago</span>
+            <div class="medio-pago">
+                <img src="./images/medios-pago.webp" width="250px"/>      
+            </div>
+          </div>
+          <!-- Sección 2: Enlaces útiles -->
+          <div class="footer-section">
+            <h3>Enlaces Útiles</h3>
+            <a href="#">Inicio</a><br>
+            <a href="#">Productos</a><br>
+            <a href="#">Servicios</a><br>
+            <a href="#">Contacto</a>
+            <a href="#">Nosotros</a>
+          </div>
+          <!-- Sección 3: Redes sociales -->
+          <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+              <a href="#"><img src="./images/facebook_icon_137647.png" width="40px"/></a>
+              <a href="#"><img src="./images/instagram_black_logo_icon_147122.png" width="40px"/></a>
+              <a href="#"><img src="./images/whatsapp-black_100119.webp" width="40px"/></a>
+              <a href="#"><img src="./images/tiktok_logo_icon_186928.png" width="40px"/></a>
+            </div>
+            <h3>+01 712 - 3212</h3>
+          </div>
+        </div>
+        <!-- Derechos reservados -->
+        <div class="footer-bottom">
+          &copy; 2024 Mr.Phone | Todos los derechos reservados.
+        </div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html

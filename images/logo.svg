@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 958.04 208">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 13px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #ea0029;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #ea0029;
+        stroke-width: 12.8px;
+      }
+
+      .cls-3 {
+        font-family: OxaniumRoman-Regular, Oxanium;
+        font-size: 173.92px;
+        font-variation-settings: 'wght' 400;
+        stroke: #fff;
+        stroke-width: 8px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <circle class="cls-4" cx="409.72" cy="140.06" r="13.17"/>
+    <rect class="cls-2" x="196.89" y="6.5" width="753.8" height="195"/>
+    <text class="cls-3" transform="translate(210.72 153.23) scale(.97 1)"><tspan x="0" y="0">mr phone</tspan></text>
+    <rect class="cls-1" x="6.5" y="6.5" width="189.73" height="195"/>
+    <circle class="cls-4" cx="422.9" cy="140.06" r="15.98"/>
+    <g>
+      <path class="cls-4" d="M165.33,89.7v81.83h-25v-81.83c0-7.88-3.79-15.41-10.65-21.22-5.72-4.82-13-8.02-21.06-9.24-4.71-.72-9.81-.72-14.51-.01-18.37,2.79-31.7,15.6-31.7,30.47v81.83h-25v-81.83c0-27.32,22.27-50.53,52.95-55.18,0,0,.02,0,.03,0,1.52-.23,3.02.55,3.73,1.92l7.25,13.84,7.25-13.84c.71-1.36,2.21-2.15,3.73-1.92,0,0,.02,0,.03,0,12.61,1.91,24.17,7.05,33.43,14.86,12.59,10.65,19.52,24.97,19.52,40.32Z"/>
+      <polygon class="cls-4" points="76.79 57.94 125.94 57.94 101.37 104.85 76.79 57.94"/>
+    </g>
+  </g>
+</svg>
