@@ -118,12 +118,13 @@ body {
     text-align: center;
     border-color: #161616;
     border-style: double;
+    background-color: #d0a927;
 }
 
 .parrafo-servicio{
     max-width: 350px;
     font-style: italic;
-    
+       
 }
 
 
@@ -138,6 +139,7 @@ button {
 .Productos-tienda{
     margin: 40px 30px;
     margin-top: 30px;
+    
 }
 h1{
     margin-bottom: 40px;
@@ -155,6 +157,7 @@ h1{
         border-radius: 8px;
         padding: 12px;
         text-align: center;
+        background-color: #ffffff;
       }
 .productos-descuento > div > h4{
     margin-top: 10px;
@@ -275,6 +278,8 @@ h1{
     </header>
 
     <main>
+      
+        
         <div class="slider-container">
             <div class="slider">
                 <div class="slide"><img src="./images/banner1.png" alt="Imagen 1"></div>
@@ -284,16 +289,25 @@ h1{
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-
+        <script>
+            const nombreDeUsuario = prompt(
+              "Hola¿Cómo te llamas?"
+            );
+          </script>
+        <h1>Bienvenido <script>document.write(nombreDeUsuario)</script></h1>
         <div class="flex-servicio">
+
             <p class="parrafo-servicio">
                 Contamos con los mejores técnicos para dejar tu teléfono como nuevo ¡Trabajamos con repuestos 100% original!
             </p>
             <button>
                 Cotizar
             </button>
+            
 
         </div>
+        
+        <input type="color" id="colorFondo">
 
         <section class="Productos-tienda"> 
             <h1> Productos con descuento</h1>
@@ -333,12 +347,11 @@ h1{
 
             </div>
         </section>
-
         <section class="Productos-tienda"> 
             <h1> Te puede gustar</h1>
             <div class="productos-descuento">
                 <!--Producto 1-->
-                <div>
+                <div >
                     <img src="./images/284397-1200-auto.webp" width="326px" height=""/>
                     <h4>Smartwatch Roadtrip Watch S3 Lite 43mm, resistente </br>al agua</h4>
                     <p>
@@ -349,7 +362,7 @@ h1{
 
                 <!--Producto 1-->
 
-                <div>
+                <div >
                     <img src="./images/304136-1200-auto.webp" width="326px" height=""/>
                     <h4>Case para Samsung Galaxy S23 con anillo de soporte</h4>
                     <p>
@@ -360,7 +373,7 @@ h1{
                 </div>
                 <!--Producto 2-->
 
-                <div>
+                <div >
                     <img src="./images/358182-1200-auto.webp" width="326px" height=""/>
                     <h4>Trípode Selfie stick con control bluetooth de 68 cm</h4>
                     <p>
@@ -413,5 +426,55 @@ h1{
         </div>
       </footer>
     <script src="script.js"></script>
+
+    <!--Cambio de color de la clase .flex-servicio -->
+    <script>
+       
+        const colorPicker = document.getElementById('colorFondo');
+    
+        
+        colorPicker.addEventListener('input', (event) => {
+       
+            const nuevoColor = event.target.value;
+    
+            
+            const elementos = document.querySelectorAll('.flex-servicio');
+            elementos.forEach((elemento) => {
+                elemento.style.backgroundColor = nuevoColor;
+            });
+        });
+    </script>
+          <!--Cambio de valor de precio actual-->  
+    <script>
+        function cambiarPrecioAnterior() {
+          // Solicitar un nuevo precio al usuario
+          const nuevoPrecio = prompt('Ingresa el nuevo valor para el precio anterior:');
+          
+          // Validar que el usuario haya ingresado algo
+          if (nuevoPrecio) {
+            // Confirmar si desea aplicar el cambio
+            const confirmarCambio = confirm(`¿Estás seguro de cambiar el precio anterior a "${nuevoPrecio}"?`);
+            
+            if (confirmarCambio) {
+              // Seleccionar el elemento y cambiar el texto
+              const precioAnterior = document.querySelector('.precio-anterior');
+              if (precioAnterior) {
+                precioAnterior.textContent = nuevoPrecio;
+                alert('El precio anterior se ha actualizado correctamente.');
+              } else {
+                alert('No se encontró el elemento con la clase "precio-anterior".');
+              }
+            } else {
+              alert('Cambio cancelado.');
+            }
+          } else {
+            alert('No se ingresó un valor válido.');
+          }
+        }
+      
+        // Llamar a la función para iniciar el cambio
+        cambiarPrecioAnterior();
+      
+    </script>
 </body>
-</html
+</html>
