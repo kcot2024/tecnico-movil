@@ -1,74 +1,63 @@
-/* Estilos Generales */
-* {
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #e1fbfc;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-/* Slider Container */
-.slider-container {
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    max-width:1600px;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Slider */
-.slider {
+h1{
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.slide {
-    min-width: 100%;
-    overflow: hidden;
+.todosLosBotones{
+    margin: 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
 }
-
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Botones de Navegación */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(138, 138, 138, 0.5);
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1rem;
+.botones {
+    
+    width: 250px;
+    height:100px;
+    background-color: #07dae1;
+    align-items: center;
     border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
+    border-radius: 15px;
+    font-size: 20px;
+    color: azure;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.MostrarDatos{
+    background-color: antiquewhite;
+    height: 200px;
+    border-radius: 10px;
+}
+.cajaDeRespuesta{
+    background-color: #bdbdbd;
+    margin-left: 90px;
+    margin-right: 20px;
+    height: 140px;
+    border-radius: 10px;
+}
+#resultado{
+    margin-left: 8px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(33, 33, 33);
+
 }
 
-.prev {
-    left: 10px;
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.bloque {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
 }
 
-.next {
-    right: 10px;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .slider-container {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .prev, .next {
-        font-size: 1.5rem;
-    }
-}

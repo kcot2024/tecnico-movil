@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.Phone | Servicio técnico y ventas de accesroios móviles</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesSlider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
        /* General */
@@ -119,6 +119,7 @@ body {
     border-color: #161616;
     border-style: double;
     background-color: #d0a927;
+    gap: 10px;
 }
 
 .parrafo-servicio{
@@ -129,12 +130,19 @@ body {
 
 
 button {
-        background-color: #d0a927;
+        background-color: #fd2525;
         color: #fff;
         border: none;
-        padding: 12px 16px;
+        padding: 12px 13px;
+        font-weight: bold;
         font-family: Verdana, sans-serif;
-        border-radius: 20px;
+        border-radius: 15px;
+
+      }
+button a {
+    text-decoration: none;
+    color: #d1eaff;
+
       }
 .Productos-tienda{
     margin: 40px 30px;
@@ -289,26 +297,22 @@ h1{
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-        <script>
-            const nombreDeUsuario = prompt(
-              "Hola¿Cómo te llamas?"
-            );
-          </script>
-        <h1>Bienvenido <script>document.write(nombreDeUsuario)</script></h1>
+                
         <div class="flex-servicio">
 
             <p class="parrafo-servicio">
                 Contamos con los mejores técnicos para dejar tu teléfono como nuevo ¡Trabajamos con repuestos 100% original!
             </p>
-            <button>
+            <button class="botonEstilo">
                 Cotizar
+            </button>
+            <button class="botonEstilo"><a href="./interactivo.html">Quiero interactuar</a>
+                
             </button>
             
 
         </div>
         
-        <input type="color" id="colorFondo">
-
         <section class="Productos-tienda"> 
             <h1> Productos con descuento</h1>
             <div class="productos-descuento">
@@ -425,56 +429,6 @@ h1{
           &copy; 2024 Mr.Phone | Todos los derechos reservados.
         </div>
       </footer>
-    <script src="script.js"></script>
-
-    <!--Cambio de color de la clase .flex-servicio -->
-    <script>
-       
-        const colorPicker = document.getElementById('colorFondo');
     
-        
-        colorPicker.addEventListener('input', (event) => {
-       
-            const nuevoColor = event.target.value;
-    
-            
-            const elementos = document.querySelectorAll('.flex-servicio');
-            elementos.forEach((elemento) => {
-                elemento.style.backgroundColor = nuevoColor;
-            });
-        });
-    </script>
-          <!--Cambio de valor de precio actual-->  
-    <script>
-        function cambiarPrecioAnterior() {
-          // Solicitar un nuevo precio al usuario
-          const nuevoPrecio = prompt('Ingresa el nuevo valor para el precio anterior ejemplo S/500:');
-          
-          // Validar que el usuario haya ingresado algo
-          if (nuevoPrecio) {
-            // Confirmar si desea aplicar el cambio
-            const confirmarCambio = confirm(`¿Estás seguro de cambiar el precio anterior a "${nuevoPrecio}"?`);
-            
-            if (confirmarCambio) {
-              // Seleccionar el elemento y cambiar el texto
-              const precioAnterior = document.querySelector('.precio-anterior');
-              if (precioAnterior) {
-                precioAnterior.textContent = nuevoPrecio;
-                alert('El precio anterior se ha actualizado correctamente.');
-              } else {
-                alert('No se encontró el elemento con la clase "precio-anterior".');
-              }
-            } else {
-              alert('Cambio cancelado.');
-            }
-          } else {
-            alert('No se ingresó un valor válido.');
-          }
-        }
-      
-        // Llamar a la función para iniciar el cambio
-        cambiarPrecioAnterior();
-      
-    </script>
 </body>
 </html>

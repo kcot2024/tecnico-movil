@@ -1,0 +1,74 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Slider Container */
+.slider-container {
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    max-width:1600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones de Navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(138, 138, 138, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev, .next {
+        font-size: 1.5rem;
+    }
+}
