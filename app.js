@@ -30,7 +30,7 @@ resultadoH2.innerText = `Mis hermanos se llaman: ${nombresDeHermanoGuardados.joi
 }
 
 // Selección del botón y contenedor
-const boton = document.getElementById("generarBloques");
+
 const contenedor = document.getElementById("bloquesContenedor");
 
 // Función para generar un color aleatorio en formato hexadecimal
@@ -109,5 +109,5 @@ function jugarPiedraPapelTijera() {
     const resultado = determinarResultado(eleccionUsuario, eleccionComputadora);
 
     // Mostrar el resultado al usuario
-    resultadoH2cd .textContent = `Tu elección: ${eleccionUsuario}. Elección de la computadora: ${eleccionComputadora}. Resultado: ${resultado}`;
+    resultadoH2.textContent = `Tu elección: ${eleccionUsuario}. Elección de la computadora: ${eleccionComputadora}. Resultado: ${resultado}`;
 }
