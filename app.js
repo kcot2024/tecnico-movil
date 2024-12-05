@@ -1,4 +1,3 @@
-let resultadoH2 = document.getElementById("resultado");
 
 function cambiarColorFondo() {
 
@@ -6,26 +5,39 @@ function cambiarColorFondo() {
         '¡Bienvenido! Puedes cambiar el color del fondo ingresando el nombre de color en ingles, hexadecimal o rgb. '
     );
     document.body.style.backgroundColor = bgColor;
-    resultadoH2.innerText = `El color seleccionado es: ${bgColor}`;
     }
     cambiarColorFondo();
-    
+
+
+
+
+const resultadoH2 = document.getElementById("game-area");
 function guardarNombresDeHermanos(){
-    const cantidadDeHermanos = parseInt(
+const cantidadDeHermanos = parseInt(
         prompt("¿Cuántos hermanos tienes?")
 );
 
 
-const nombresDeHermanoGuardados = [];
-
 let contador = 0;
+
+const listaOrdenada = document.createElement("ol");
+  listaOrdenada.style.marginLeft = "40px";
+  listaOrdenada.style.marginTop = "20px";
+
 while (contador < cantidadDeHermanos){
+
     const nombreDeHermano = prompt("Ingresa el nombre de tu hermano");
-    nombresDeHermanoGuardados.push(nombreDeHermano);
+   
+    const listItem = document.createElement("li");
+    listItem.textContent = nombreDeHermano;
+    
+    listaOrdenada.appendChild(listItem);
+
     contador++
 }
-console.log("Lista de Hermanos: ", nombresDeHermanoGuardados )
-resultadoH2.innerText = `Mis hermanos se llaman: ${nombresDeHermanoGuardados.join(", ")}`;
+resultadoH2.innerHTML ="";
+resultadoH2.appendChild(listaOrdenada);
+
 
 }
 
@@ -46,8 +58,7 @@ function generarColorAleatorio() {
 // Función para generar los bloques
 function generarBloques() {
     // Limpiar los bloques previos
-    contenedor.innerHTML = "";
-
+    
     // Pedir al usuario el número de bloques
     const numeroDeBloques = parseInt(prompt("¿Cuántos bloques quieres generar?"));
 
@@ -75,10 +86,14 @@ function generarEleccionComputadora() {
     return opciones[indiceAleatorio];
 }
 
+
+
+
 // Función para determinar el resultado del juego
+
 function determinarResultado(eleccionUsuario, eleccionComputadora) {
     if (eleccionUsuario === eleccionComputadora) {
-        return "¡Es un empate!";
+       return resultadoH2.textContent = "Empate";
     }
 
     if (
@@ -86,10 +101,11 @@ function determinarResultado(eleccionUsuario, eleccionComputadora) {
         (eleccionUsuario === "tijera" && eleccionComputadora === "papel") ||
         (eleccionUsuario === "papel" && eleccionComputadora === "piedra")
     ) {
-        return "¡Ganaste!";
+        return resultadoH2.textContent = "Ganaste";
+         
     }
 
-    return "¡Perdiste!";
+    return resultadoH2.textContent = "Perdiste";
 }
 
 // Función principal del juego
@@ -110,4 +126,5 @@ function jugarPiedraPapelTijera() {
 
     // Mostrar el resultado al usuario
     resultadoH2.textContent = `Tu elección: ${eleccionUsuario}. Elección de la computadora: ${eleccionComputadora}. Resultado: ${resultado}`;
+    
 }
